@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessObjects;
 
 namespace Services
 {
-    internal class ICatergoryService
+    public interface ICatergoryService
     {
+        List<Category> GetCategories();
     }
 }

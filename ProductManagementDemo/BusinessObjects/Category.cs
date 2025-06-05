@@ -6,7 +6,27 @@ using System.Threading.Tasks;
 
 namespace BusinessObjects
 {
-    internal class Category
+    public partial class Category
     {
+
+
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+        public virtual ICollection<Product> Products { get; set; } 
+        public Category() { 
+            Products = new HashSet<Product>();
+        }
+
+
+        public Category(int catID, string catName)
+        {
+            this.CategoryId = catID;
+            this.CategoryName = catName;
+        }
+
+
+
+        
+
     }
 }
